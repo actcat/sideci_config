@@ -1,2 +1,2 @@
-# sideci_config
-SideCI Linter Configuration Files
+# SideCI Linter Configuration Files.
+SideCI provides linter's configuration sample files.
