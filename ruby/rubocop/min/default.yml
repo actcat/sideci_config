@@ -1,10 +1,3 @@
-# This is the default configuration file. Enabling and disabling is configured
-# in separate files. This file adds all other parameters apart from Enabled.
-
-inherit_from:
-  - enabled.yml
-  - disabled.yml
-
 # Common configuration.
 AllCops:
   # Include common Ruby source files.
@@ -27,6 +20,9 @@ AllCops:
     - '**/Vagabondfile'
   Exclude:
     - 'vendor/**/*'
+    - 'db/**/*' # [sideci] for rails apps
+    - 'config/**/*' # [sideci] for rails apps
+    - 'script/**/*' # [sideci] for rails apps
   # By default, the rails cops are not run. Override in project or home
   # directory .rubocop.yml files, or by giving the -R/--rails option.
   RunRailsCops: false

@@ -1,6 +1,6 @@
 # These are all the cops that are disabled.
 # SideCI Minimum cops sample.
-#################### Style ###############################
+#################### Tool default ########################
 
 Style/AutoResourceCleanup:
   Description: 'Suggests the usage of an auto resource cleanup version of a method (if available).'
@@ -67,6 +67,13 @@ Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-i'
   Enabled: false
+
+Lint/LiteralInInterpolation:
+  Description: 'Avoid interpolating literals in strings'
+  AutoCorrect: false
+
+
+#################### [sideci] Disable ####################
 
 Style/AccessModifierIndentation:
   Description: Check indentation of private/protected visibility modifiers.
@@ -917,8 +924,3 @@ Metrics/PerceivedComplexity:
                  human reader.
   Enabled: false
 
-#################### Lint ################################
-
-Lint/LiteralInInterpolation:
-  Description: 'Avoid interpolating literals in strings'
-  AutoCorrect: false
