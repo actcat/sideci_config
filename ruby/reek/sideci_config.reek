@@ -1,0 +1,138 @@
+---
+### Excluding directories
+
+# Directories below will not be scanned at all
+exclude_paths:
+  - vendor
+  - db
+  - config
+  - script
+
+### Directory specific configuration
+
+# You can configure smells on a per-directory base.
+# E.g. the classic Rails case: controllers smell of NestedIterators (see /docs/Nested-Iterators.md) and
+# helpers smell of UtilityFunction (see docs/Utility-Function.md)
+"app/controllers":
+  NestedIterators:
+    max_allowed_nesting: 3 # [sideci] ease 2 to 3
+"app/helpers":
+  IrresponsibleModule:
+    enabled: false
+  UtilityFunction:
+    enabled: false
+
+### Generic smell configuration
+
+# You can disable smells completely
+Attribute:
+  enabled: true
+  exclude: []
+BooleanParameter:
+  enabled: true
+  exclude: []
+ClassVariable:
+  enabled: true
+  exclude: []
+ControlParameter:
+  enabled: true
+  exclude: []
+DataClump:
+  enabled: true
+  exclude: []
+  max_copies: 2
+  min_clump_size: 2
+DuplicateMethodCall:
+  enabled: true
+  exclude: []
+  max_calls: 2 # [sideci] ease 1 to 2
+  allow_calls: []
+FeatureEnvy:
+  enabled: true
+  exclude: []
+IrresponsibleModule:
+  enabled: false
+  exclude: []
+LongParameterList:
+  enabled: true
+  exclude: []
+  max_params: 3
+  overrides:
+    initialize:
+      max_params: 5
+LongYieldList:
+  enabled: true
+  exclude: []
+  max_params: 3
+ModuleInitialize:
+  enabled: true
+  exclude: []
+NestedIterators:
+  enabled: true
+  exclude: []
+  max_allowed_nesting: 3 # [sideci] ease 1 to 3
+  ignore_iterators:
+  - tap
+NilCheck:
+  enabled: true
+  exclude: []
+PrimaDonnaMethod:
+  enabled: true
+  exclude: []
+RepeatedConditional:
+  enabled: true
+  exclude: []
+  max_ifs: 2
+TooManyInstanceVariables:
+  enabled: true
+  exclude: []
+  max_instance_variables: 4
+TooManyMethods:
+  enabled: true
+  exclude: []
+  max_methods: 15
+TooManyStatements:
+  enabled: true
+  exclude:
+  - initialize
+  max_statements: 10 # [sideci] ease 5 to 10
+UncommunicativeMethodName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^[a-z]$/
+  - !ruby/regexp /[0-9]$/
+  - !ruby/regexp /[A-Z]/
+  accept: []
+UncommunicativeModuleName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^.$/
+  - !ruby/regexp /[0-9]$/
+  accept: []
+UncommunicativeParameterName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^.$/
+  - !ruby/regexp /[0-9]$/
+  - !ruby/regexp /[A-Z]/
+  - !ruby/regexp /^_/
+  accept: []
+UncommunicativeVariableName:
+  enabled: true
+  exclude: []
+  reject:
+  - !ruby/regexp /^.$/
+  - !ruby/regexp /[0-9]$/
+  - !ruby/regexp /[A-Z]/
+  accept:
+  - _
+UnusedParameters:
+  enabled: true
+  exclude: []
+UtilityFunction:
+  enabled: true
+  exclude: []
+
