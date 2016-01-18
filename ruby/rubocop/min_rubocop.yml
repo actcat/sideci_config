@@ -706,7 +706,7 @@ Style/TrailingBlankLines:
     - final_newline
     - final_blank_line
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   # If EnforcedStyleForMultiline is comma, the cop requires a comma after the
   # last item of a list, but only for lists where each item is on its own line.
   # If EnforcedStyleForMultiline is consistent_comma, the cop requires a comma
@@ -2039,7 +2039,7 @@ Style/TrailingBlankLines:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#newline-eof'
   Enabled: false
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   Description: 'Checks for trailing comma in parameter lists and literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   Enabled: false

@@ -27,9 +27,6 @@ AllCops:
     - '**/Vagabondfile'
   Exclude:
     - 'vendor/**/*'
-  # By default, the rails cops are not run. Override in project or home
-  # directory .rubocop.yml files, or by giving the -R/--rails option.
-  RunRailsCops: false
   # Cop names are not displayed in offense messages by default. Change behavior
   # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
   # option.
@@ -60,6 +57,9 @@ AllCops:
   # which is "/tmp" on Unix-like systems, but could be something else on other
   # systems.
   CacheRootDirectory: /tmp
+
+Rails:
+ Enabled: false
 
 # Indent private/protected/public as deep as method definitions
 Style/AccessModifierIndentation:
@@ -710,7 +710,7 @@ Style/TrailingBlankLines:
     - final_newline
     - final_blank_line
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   # If EnforcedStyleForMultiline is comma, the cop requires a comma after the
   # last item of a list, but only for lists where each item is on its own line.
   # If EnforcedStyleForMultiline is consistent_comma, the cop requires a comma
@@ -849,7 +849,7 @@ Lint/DefEndAlignment:
     - def
   AutoCorrect: false
 
-# Checks for unused method arguments.  
+# Checks for unused method arguments.
 Lint/UnusedMethodArgument:
   AllowUnusedKeywordArguments: false
 
