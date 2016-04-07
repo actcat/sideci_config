@@ -152,7 +152,7 @@ Lint/ShadowingOuterLocalVariable:
                  for block arguments or block local variables.
   Enabled: true
 
-Lint/SpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Description: >-
                  Put a space between a method name and the first argument
                  in a method call without parentheses.
@@ -285,10 +285,6 @@ Rails/Date:
   Description: >-
                   Checks the correct usage of date aware methods,
                   such as Date.today, Date.current etc.
-  Enabled: true
-
-Rails/DefaultScope:
-  Description: 'Checks if the argument passed to default_scope is a block.'
   Enabled: true
 
 Rails/Delegate:
