@@ -59,7 +59,13 @@ DuplicateMethodCall:
 FeatureEnvy:
   enabled: false
   exclude: []
+InstanceVariableAssumption:
+  enabled: false
+  exclude: []
 IrresponsibleModule:
+  enabled: false
+  exclude: []
+ManualDispatch:
   enabled: false
   exclude: []
 NilCheck:
