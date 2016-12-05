@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="SideCI Recommended rule set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>
+    This rule set is recommended by SideCI.
+    It contains only generic rules in all projects.
+  </description>
+
+  <!--
+  <rule ref="rulesets/cleancode.xml" />
+  -->
+  <rule ref="rulesets/codesize.xml" />
+  <rule ref="rulesets/controversial.xml">
+    <exclude name="CamelCaseClassName"></exclude>
+    <exclude name="CamelCasePropertyName"></exclude>
+    <exclude name="CamelCaseMethodName"></exclude>
+    <exclude name="CamelCaseParameterName"></exclude>
+    <exclude name="CamelCaseVariableName"></exclude>
+  </rule>
+  <rule ref="rulesets/design.xml" />
+  <!--
+    We think Naming rule is not important. So, we exclude it.
+  <rule ref="rulesets/naming.xml" />
+  -->
+  <rule ref="rulesets/unusedcode.xml" />
+</ruleset>
