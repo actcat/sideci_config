@@ -14,7 +14,9 @@
   <!--
   <rule ref="rulesets/cleancode.xml" />
   -->
-  <rule ref="rulesets/codesize.xml" />
+  <rule ref="rulesets/codesize.xml">
+    <exclude name="NPathComplexity"></exclude>
+  </rule>
   <rule ref="rulesets/controversial.xml">
     <exclude name="CamelCaseClassName"></exclude>
     <exclude name="CamelCasePropertyName"></exclude>
@@ -27,5 +29,7 @@
     We think Naming rule is not important. So, we exclude it.
   <rule ref="rulesets/naming.xml" />
   -->
-  <rule ref="rulesets/unusedcode.xml" />
+  <rule ref="rulesets/unusedcode.xml">
+    <exclude name="UnusedFormalParameter"></exclude>
+  </rule>
 </ruleset>
