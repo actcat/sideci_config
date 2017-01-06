@@ -14,5 +14,6 @@
     "lll",
     "misspell",
     "vetshadow"
-  ]
+  ],
+  "Cyclo": 15
 }

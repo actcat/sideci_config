@@ -24,3 +24,8 @@ Disabled rules
 ## Disable section
 
 Some linters are noisy, has false positive or unnecessary. So, the linters are disabled.
+
+## Cyclo section
+
+The configuration is same as `--cyclo-over` option.
+It is used by gocyclo
