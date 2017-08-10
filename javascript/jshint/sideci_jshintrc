@@ -14,5 +14,7 @@
 
   // TODO: Specific your global variables
   "globals": {
-  }
+  },
+
+  "esversion": 2015
 }
